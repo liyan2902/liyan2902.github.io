@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Ubuntu配置与美化]]></title>
+    <url>%2F2019%2F05%2F26%2Fubuntu%E9%85%8D%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[Ubuntu18.04配置与美化 1.常用软件 1.搜狗输入法 2.Chrome浏览器 3.shadowsocks-qt5 2.系统美化 1.Gnome-tweak-tool 2.Gnome插件 3.设置主题，背景，锁屏 Ubuntu18.04配置与美化1.常用软件1.搜狗输入法123sudo apt install fcitx #安装fcitx框架sudo dpkg -i sougoupinyin_xxxx.deb #安装从官网下载好的deb包sudo apt install -f #如果失败则解决依赖问题，重新安装 然后移步到设置-区域和语言,只保留汉语 接着选择管理已安装的语言，修改键盘输入法系统为fcitx 选择应用管理的fcitx配置，选择加号添加搜狗输入法 如果没有找到搜狗输入法就重启系统 2.Chrome浏览器12345sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/ #添加依赖wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - #导入公钥sudo apt update #更新依赖sudo apt install google-chrome-stable #安装稳定版/usr/bin/google-chrome-stable #启动Chrome浏览器，添加到收藏 3.shadowsocks-qt51sudo add-apt-repository ppa:hzwhuang/ss-qt5 提示出错，原因是ppa:hzwhuang/ss-qt5 并没有18.04版本的源,需要修改配置文件 1sudo vim /etc/apt/sources.list.d/hzwhuang-ubuntu-ss-qt5-bionic.list 修改内容如下 1deb http://ppa.launchpad.net/hzwhuang/ss-qt5/ubuntu xenial main 然后执行命令 12sudo apt updatesudo apt install shadowsocks-qt5 2.系统美化1.Gnome-tweak-tool1sudo apt install gnome-tweak-tool 2.Gnome插件1sudo apt install chrome-gnome-shell 在Chrome网上应用商店安装浏览器插件Gnome 点击插件图标进入Gnome Shell扩展商店 添加自己喜欢的插件 User Themes (从本地安装shell主题,安装它以后才能进行第三步的美化) Dash to Dock (定义侧边栏) Coverflow Alt-Tab (Alt+Tab切换应用) NetSpeed (顶栏显示网速) OpenWeather (顶栏显示天气情况) 3.设置主题，背景，锁屏 从Gnome-look下载自己喜欢的Shell样式 在wallhaven下载自己喜欢的壁纸 系统软件，打开GNOME Tweaks里的外观进行设置]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Anaconda使用]]></title>
+    <url>%2F2019%2F05%2F26%2FAnaconda%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[一.安装 二.常用命令 2.1环境管理 2.2包管理 一.安装 在清华大学镜像站下载Anaconda安装包 在下载目录进行安装 1bash Anaconda3-5.2.0-Linux-x86_64.sh 重启终端,将Anaconda的源切换到清华镜像 12345conda config --addchannels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --addchannels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/conda config --set show_channel_urls yes 更多第三方源详见清华官网介绍 二.常用命令2.1环境管理 创建指定python版本的环境 1conda create --name 环境名称 python=3.5 激活/退出环境 1conda activate/deactivate 环境名称 2.2包管理 在指定环境安装包1conda install -n 环境名称 包名称]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F05%2F07%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>Hexo笔记</category>
+      </categories>
+  </entry>
+</search>
